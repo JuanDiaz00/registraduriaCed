@@ -10,12 +10,10 @@ class Conexion
     public static function getConnection()
     {
        
-        $conector = new mysqli("localhost", "root", "", "registraduria");
+        $conector = new mysqli(HOST, USER, PASSWORD, DB);
         if (mysqli_connect_errno()) {
-            //echo $conector->connect_error;
+            echo "Error conectandose a la base de datos.";
         }
         return $conector;
     }
 }
-//print_r(Conexion::getConnection());
-?>
