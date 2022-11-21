@@ -19,7 +19,7 @@ require_once(CONTROLLER_PATH . "ciudadanos.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?php echo CSS_PATH . "bootstrap.min.css"; ?>">
+    <link rel="stylesheet" href="../../estilos/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Administración ciudadano</title>
 </head>
@@ -158,47 +158,47 @@ require_once(CONTROLLER_PATH . "ciudadanos.php");
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Nombres</label>
-                        <input type="text" value="<?php echo $row["nombres"]; ?>" class="form-control" id="nombres" name="nombres" aria-describedby="textHelp">
+                        <input type="text" class="form-control" id="nombres" name="nombres" aria-describedby="textHelp">
                         <div id="textHelp" class="form-text">Ingrese el nombre/s.</div>
                     </div>
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Apellidos</label>
-                        <input type="text" value="<?php echo $row["apellidos"]; ?>" class="form-control" id="apellidos" name="apellidos" aria-describedby="textHelp">
+                        <input type="text" class="form-control" id="apellidos" name="apellidos" aria-describedby="textHelp">
                         <div id="textHelp" class="form-text">Ingrese los apellidos.</div>
                     </div>
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Identificación</label>
-                        <input type="number" value="<?php echo $row["identificacion"]; ?>" class="form-control" id="identificacion" name="identificacion" aria-describedby="textHelp">
+                        <input type="number" class="form-control" id="identificacion" name="identificacion" aria-describedby="textHelp">
                         <div id="textHelp" class="form-text">Ingrese la identificación.</div>
                     </div>
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Fecha de nacimiento</label>
-                        <input type="date" value="<?php echo $row["fx_nacimiento"]; ?>" class="form-control" id="fx_nacimiento" name="fx_nacimiento" aria-describedby="textHelp">
+                        <input type="date" class="form-control" id="fx_nacimiento" name="fx_nacimiento" aria-describedby="textHelp">
                         <div id="textHelp" class="form-text">Ingrese la fechad e nacimiento.</div>
                     </div>
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Lugar de nacimiento</label>
-                        <input type="text" value="<?php echo $row["lugar_nacimiento"]; ?>" class="form-control" id="lugar_nacimiento" name="lugar_nacimiento" aria-describedby="textHelp">
+                        <input type="text" class="form-control" id="lugar_nacimiento" name="lugar_nacimiento" aria-describedby="textHelp">
                         <div id="textHelp" class="form-text">Ingrese el lugar de nacimiento.</div>
                     </div>
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Lugar de expedición de identificación</label>
-                        <input type="text" value="<?php echo $row["lugar_exp"]; ?>" class="form-control" id="lugar_exp" name="lugar_exp" aria-describedby="textHelp">
+                        <input type="text" class="form-control" id="lugar_exp" name="lugar_exp" aria-describedby="textHelp">
                         <div id="textHelp" class="form-text">Ingrese el lugar de expidicón de la identificación.</div>
                     </div>
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Estatura</label>
-                        <input type="number" value="<?php echo $row["estatura"]; ?>" class="form-control" id="estatura" name="estatura" aria-describedby="textHelp">
+                        <input type="number" class="form-control" id="estatura" name="estatura" aria-describedby="textHelp">
                         <div id="textHelp" class="form-text">Ingrese la estatura.</div>
                     </div>
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Grupo sanguineo</label>
-                        <input type="text" value="<?php echo $row["gs"]; ?>" class="form-control" id="gs" name="gs" aria-describedby="textHelp">
+                        <input type="text" class="form-control" id="gs" name="gs" aria-describedby="textHelp">
                         <div id="textHelp" class="form-text">Ingrese el grupo sanguineo.</div>
                     </div>
                     <div class="mb-3">
                         <label for="nombre" class="form-label">RH</label>
-                        <input type="text" value="<?php echo $row["rh"]; ?>" class="form-control" id="rh" name="rh" aria-describedby="textHelp">
+                        <input type="text" class="form-control" id="rh" name="rh" aria-describedby="textHelp">
                         <div id="textHelp" class="form-text">Ingrese el RH.</div>
                     </div>
                     <input type="hidden" name="nuevo_ciudadano">
@@ -211,7 +211,7 @@ require_once(CONTROLLER_PATH . "ciudadanos.php");
         </div>
     </div>
 
-    <script src="<?php echo JS_PATH . "bootstrap.min.js" ?>"></script>
+    <script src="../../scripts/bootstrap.min.js"></script>
 
 </body>
 
