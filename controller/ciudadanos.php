@@ -40,6 +40,6 @@ function newCiudadano($nombres, $apellidos, $identificacion, $fx_nacimiento, $lu
     $db -> query($queryCiudadano);
 }
 if (isset($_POST['nuevo_ciudadano'])) {
-    newCiudadano($_POST["nombres"], $_POST["apellidos"], $_POST["identificacion"], $_POST["fx_ncaimiento"], $_POST["lugar_nacimiento"], $_POST["lugar_exp"], $_POST["estatura"], $_POST["gs"], $_POST["rh"]);
+    newCiudadano($_POST["nombres"], $_POST["apellidos"], $_POST["identificacion"], $_POST["fx_nacimiento"], $_POST["lugar_nacimiento"], $_POST["lugar_exp"], $_POST["estatura"], $_POST["gs"], $_POST["rh"]);
     header("Location:".VIEWS_PATH."paginas/admin/registrar_ciudadano.php");
 }
