@@ -24,6 +24,32 @@
 					<h2 class="heading-section">Registraduria Konrad</h2>
 				</div>
 			</div>
+			<?php
+                        if (isset($_GET["info"])) {
+                            if ($_GET["info"] == 1) {
+                        ?>
+                                <div class="alert alert-danger d-flex alert-dismissible fade show" role="alert">
+                                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
+                                        <use xlink:href="#exclamation-triangle-fill" />
+                                    </svg>
+                                    <strong>¡Datos Incorrectos!</strong>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            <?php
+                            }
+                            if ($_GET["info"] == 2) {
+                            ?>
+                                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:">
+                                        <use xlink:href="#info-fill" />
+                                    </svg>
+                                    <strong>¡Cerró Sesión!</strong> Adiós
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                        <?php
+                            }
+                        }
+                        ?>
 			<div class="row justify-content-center">
 				<div class="col-md-7 col-lg-5">
 					<div class="wrap">
@@ -40,13 +66,13 @@
 									</p>
 								</div>
 							</div>
-							<form action="../../controlador/validar_login.php" class="signin-form" method="POST">
+							<form action="../../controller/valida_login.php" class="signin-form" method="POST">
 								<div class="form-group mt-3">
 									<input type="text" class="form-control" name="correo" required>
 									<label class="form-control-placeholder" for="correo">Usuario</label>
 								</div>
 								<div class="form-group">
-									<input id="password-field" type="password" class="form-control" name="clave" required>
+									<input id="clave" type="password" class="form-control" name="clave" required>
 									<label class="form-control-placeholder" for="clave">Contraseña</label>
 									<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
 								</div>

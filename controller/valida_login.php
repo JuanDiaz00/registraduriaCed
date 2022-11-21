@@ -2,14 +2,14 @@
 
 define('CONTROLLER_PATH', '../Controllers/');
 define('VIEWS_PATH', '../views/paginas/');
-define('MODELS_PATH', '../Models/');
-define('LIBRARIES_PATH', '../libraries/');
+define('LIBRARIES_PATH', '../modelo/');
 
 
 
-require_once(LIBRARIES_PATH."Conexion.php");
+
+require_once(LIBRARIES_PATH."conection.php");
 $db = Conexion::getConnection();   
-$query = "SELECT * FROM usuarios WHERE correo='".$_POST["correo"]."' and pasword='".$_POST["password"]."'";
+$query = "SELECT * FROM usuarios WHERE correo='".$_POST["correo"]."' and clave='".$_POST["clave"]."'";
 $result = $db->query($query);
 if ($result->num_rows > 0) {
     //echo "Datos Correctos";
