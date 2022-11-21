@@ -1,10 +1,10 @@
 <?php
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="Es-es">
 
 <head>
-	<title>Login 05</title>
+	<title>Ingreso</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
