@@ -156,6 +156,7 @@ require_once(CONTROLLER_PATH . "ciudadanos.php");
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+<<<<<<< HEAD
                     <form method="Post" action="<?php echo CONTROLLER_PATH; ?>ciudadanos.php">
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombres</label>
@@ -204,6 +205,54 @@ require_once(CONTROLLER_PATH . "ciudadanos.php");
                         </div>
                         <input type="hidden" name="nuevo_ciudadano">
                     </form>
+=======
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombres</label>
+                        <input type="text" class="form-control" id="nombres" name="nombres" aria-describedby="textHelp">
+                        <div id="textHelp" class="form-text">Ingrese el nombre/s.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Apellidos</label>
+                        <input type="text" class="form-control" id="apellidos" name="apellidos" aria-describedby="textHelp">
+                        <div id="textHelp" class="form-text">Ingrese los apellidos.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Identificación</label>
+                        <input type="number" class="form-control" id="identificacion" name="identificacion" aria-describedby="textHelp">
+                        <div id="textHelp" class="form-text">Ingrese la identificación.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Fecha de nacimiento</label>
+                        <input type="date" class="form-control" id="fx_nacimiento" name="fx_nacimiento" aria-describedby="textHelp">
+                        <div id="textHelp" class="form-text">Ingrese la fechad e nacimiento.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Lugar de nacimiento</label>
+                        <input type="text" class="form-control" id="lugar_nacimiento" name="lugar_nacimiento" aria-describedby="textHelp">
+                        <div id="textHelp" class="form-text">Ingrese el lugar de nacimiento.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Lugar de expedición de identificación</label>
+                        <input type="text" class="form-control" id="lugar_exp" name="lugar_exp" aria-describedby="textHelp">
+                        <div id="textHelp" class="form-text">Ingrese el lugar de expidicón de la identificación.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Estatura</label>
+                        <input type="number" class="form-control" id="estatura" name="estatura" aria-describedby="textHelp">
+                        <div id="textHelp" class="form-text">Ingrese la estatura.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Grupo sanguineo</label>
+                        <input type="text" class="form-control" id="gs" name="gs" aria-describedby="textHelp">
+                        <div id="textHelp" class="form-text">Ingrese el grupo sanguineo.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">RH</label>
+                        <input type="text" class="form-control" id="rh" name="rh" aria-describedby="textHelp">
+                        <div id="textHelp" class="form-text">Ingrese el RH.</div>
+                    </div>
+                    <input type="hidden" name="nuevo_ciudadano">
+>>>>>>> main
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
