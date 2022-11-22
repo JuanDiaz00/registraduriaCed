@@ -26,14 +26,34 @@ $pdf->Cell(0, 10, 'Reporte de Usuarios', 0, 1);
 
 $result = getAllCiudadanos();
 
+$miCabecera = array('Id', 'Nombres', 'Apellidos', 'Fecha Nacimiento', 'Lugar Nacimiento');
+$misDatos = array();
+
 $pdf->SetFont('Arial', '', 12);
+
+$pdf->SetFillColor(232,232,232);
+
+$pdf->SetFont('Arial','B',10);
+$pdf->Cell(36,6,'Identificación',1,0,'C',1);
+$pdf->Cell(36,6,'Nombres',1,0,'C',1);
+$pdf->Cell(36,6,'Apellidos',1,0,'C',1);
+$pdf->Cell(36,6,'Fecha Nacimiento',1,0,'C',1);
+$pdf->Cell(36,6,'Lugar Nacimiento',1,0,'C',1);
+$pdf->Ln(10);
+
 while ($row = mysqli_fetch_assoc($result)) {
-$pdf->Cell(0, 10, $row['identificacion'], 0, 1);
-$pdf->Cell(0, 10, $row['nombres'], 0, 1);
-$pdf->Cell(0, 10, $row['apellidos'], 0, 1);
-$pdf->Cell(0, 10, $row['fx_nacimiento'], 0, 1);
-$pdf->Cell(0, 10, $row['lugar_nacimiento'], 0, 1);
-$pdf->AddPage();
+$id = utf8_decode($row['identificacion']);
+$nombres = $row['nombres'];
+$apellidos = $row['apellidos'];
+$fx_nacimiento = $row['fx_nacimiento'];
+$lugar_nacimiento = utf8_decode($row['lugar_nacimiento']);
+
+$pdf->Cell(36,15,$id,1,0,'L',0);
+$pdf->Cell(36,15,$nombres,1,0,'L',0);
+$pdf->Cell(36,15,$apellidos,1,0,'L',0);
+$pdf->Cell(36,15,$fx_nacimiento,1,0,'L',0);
+$pdf->Cell(36,15,$lugar_nacimiento,1,0,'L',0);
+$pdf->Ln(15);
 } #Acá se hace el for para ingresar todos los usuarios
 
 // output file
