@@ -1,7 +1,6 @@
 <?php
-if (!defined('CONFIG_PATH')) {
-    define('CONFIG_PATH', '../config/');
-}
+define('CONFIG_PATH', '../config/');
+
 
 require_once(CONFIG_PATH . "config.php");
 

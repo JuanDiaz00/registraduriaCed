@@ -1,14 +1,14 @@
 <?php
 
-if (!defined('LIBRARIES_PATH')) {
+
     define('LIBRARIES_PATH', '../modelo/');
-}
 
-if (!defined('VIEWS_PATH')) {
+
+
     define('VIEWS_PATH', '../Views/');
-}
 
-require_once(LIBRARIES_PATH . "conection.php");
+
+require_once('../modelo/conection.php');
 
 function getAllCiudadanos() {
     $db = Conexion::getConnection();

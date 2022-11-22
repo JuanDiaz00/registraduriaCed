@@ -15,7 +15,7 @@ if ($result->num_rows > 0) {
     //echo "Datos Correctos";
     while ($row = mysqli_fetch_assoc($result)) {
         if ($row["rol"] == 1) { //Usuario con menos privilegios
-            header("Location:".VIEWS_PATH."user/user.php");
+            header("Location:".VIEWS_PATH."user/mostrar_ciudadanos.php");
         }
         if ($row["rol"] == 0) { //Administrador
             header("Location:".VIEWS_PATH."admin/admin.php");

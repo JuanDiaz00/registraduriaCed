@@ -9,7 +9,7 @@ if (!defined('CONFIG_PATH')) {
     define('CONFIG_PATH', '../../../config/');
 }
 
-require_once(CONTROLLER_PATH . "ciudadanos.php");
+require_once(CONTROLLER_PATH ."ciudadanos.php");
 ?>
 
 <!DOCTYPE html>
