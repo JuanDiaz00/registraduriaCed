@@ -30,7 +30,9 @@ $pdf->AddPage();
 $pdf->SetFont('Arial', '', 12);
 $pdf->Cell(0, 10, 'Reporte de Usuarios', 0, 1);
 
-for($i = 1; $i < 10; $i++){
+$result = getAllCiudadanos();
+
+while ($row = mysqli_fetch_assoc($result)) {
 
 } #Acá se hace el for para ingresar todos los usuarios
 
