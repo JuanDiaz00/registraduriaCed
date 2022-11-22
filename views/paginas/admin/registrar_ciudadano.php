@@ -34,7 +34,7 @@ require_once(CONTROLLER_PATH . "ciudadanos.php");
         <nav>
             <ul class="nav-links">
                 <li><a href="#">Registrar ciudadano</a></li>
-                <li><a href="./admin.php">Generar reporte</a></li>
+                <li><a href="./reporte.php">Generar reporte</a></li>
             </ul>
         </nav>
         <a class="btn" href="../index.php?info=2"><button>Cerrar sesión</button></a>

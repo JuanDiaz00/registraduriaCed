@@ -1,5 +1,4 @@
 <?php
-#Paths
 define('LIBRARIES_PATH', '../../../modelo/');
 define('CONTROLLER_PATH', '../../../controller/');
 define('VIEWS_PATH', '../../../views/');
@@ -12,35 +11,20 @@ if (!defined('CONFIG_PATH')) {
 
 require_once(CONTROLLER_PATH . "ciudadanos.php");
 ?>
-
 <html>
 
+<head>
+    <title>Ingreso</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../estilos/styles.css">
+
+</head>
+
+
 </html>
-
-<?php
-#Acá voy a hacer lo de generar reporte, no tocar.
-// include class
-require('fpdf/fpdf.php');
-
-// create document
-$pdf = new FPDF();
-$pdf->AddPage();
-
-// add text
-$pdf->SetFont('Arial', '', 12);
-$pdf->Cell(0, 10, 'Reporte de Usuarios', 0, 1);
-
-$result = getAllCiudadanos();
-
-while ($row = mysqli_fetch_assoc($result)) {
-$pdf->Cell(0, 10, $row['identificacion'], 0, 1);
-$pdf->Cell(0, 10, $row['nombres'], 0, 1);
-$pdf->Cell(0, 10, $row['apellidos'], 0, 1);
-$pdf->Cell(0, 10, $row['fx_nacimiento'], 0, 1);
-$pdf->Cell(0, 10, $row['lugar_nacimiento'], 0, 1);
-$pdf->AddPage();
-} #Acá se hace el for para ingresar todos los usuarios
-
-// output file
-$pdf->Output('', 'reporte.pdf');
-?>
