@@ -27,7 +27,7 @@ $pdf = new FPDF();
 $pdf->AddPage();
 
 // add text
-$pdf->SetFont('Arial', '', 12);
+$pdf->SetFont('Arial', 'B', 12);
 $pdf->Cell(0, 10, 'Reporte de Usuarios', 0, 1);
 
 $result = getAllCiudadanos();
