@@ -42,10 +42,10 @@ $pdf->Cell(36,6,'Lugar Nacimiento',1,0,'C',1);
 $pdf->Ln(10);
 
 while ($row = mysqli_fetch_assoc($result)) {
-$id = $row['identificacion'];
-$nombres = $row['nombres'];
-$apellidos = $row['apellidos'];
-$fx_nacimiento = $row['fx_nacimiento'];
+$id = utf8_decode($row['identificacion']);
+$nombres = utf8_decode($row['nombres']);
+$apellidos = utf8_decode($row['apellidos']);
+$fx_nacimiento = utf8_decode($row['fx_nacimiento']);
 $lugar_nacimiento = utf8_decode($row['lugar_nacimiento']);
 
 $pdf->Cell(36,15,$id,1,0,'L',0);
