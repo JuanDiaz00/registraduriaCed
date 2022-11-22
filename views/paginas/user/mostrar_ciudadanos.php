@@ -1,7 +1,15 @@
 <?php
-define('controller_path', '../../../controller/');
-define('LIBRARIES_PATH', '../modelo/');
-require(controller_path . "ciudadanos.php");
+define('LIBRARIES_PATH', '../../../modelo/');
+define('CONTROLLER_PATH', '../../../controller/');
+define('VIEWS_PATH', '../../../views/');
+define('CSS_PATH', '../../estilos/');
+define('JS_PATH', '../../scripts/');
+
+if (!defined('CONFIG_PATH')) {
+    define('CONFIG_PATH', '../../../config/');
+}
+
+require_once(CONTROLLER_PATH ."ciudadanos.php");
 ?>
 <!doctype html>
 <html lang="Es-es">
@@ -22,29 +30,7 @@ require(controller_path . "ciudadanos.php");
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3">
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.php">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Perfil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link " href="?all=1">Cantantes</a>
-                    </li>
-                    <li class="nav-item dropdown ml-md-auto">
-                        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
-                            data-toggle="dropdown">Dropdown link</a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another
-                                action</a> <a class="dropdown-item" href="#">Something else here</a>
-                            <div class="dropdown-divider">
-                            </div> <a class="dropdown-item" href="#">Separated link</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            
             <div class="col-md-9">
                 <div class="jumbotron">
                     <h2>
@@ -76,7 +62,7 @@ require(controller_path . "ciudadanos.php");
                                     <?php echo $row["nombres"]; ?>
                                 </td>
                                 <td>
-                                    <?php echo $row["apellido"]; ?>
+                                    <?php echo $row["apellidos"]; ?>
                                 </td>
                                 <td>
                                     <?php echo $row["fx_nacimiento"]; ?>
@@ -87,7 +73,7 @@ require(controller_path . "ciudadanos.php");
                             </tr>
                             <?php
                             }
-                            ?>3
+                            ?>
 
                         </tbody>
                     </table>

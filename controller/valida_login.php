@@ -18,7 +18,7 @@ if ($result->num_rows > 0) {
             header("Location:".VIEWS_PATH."user/mostrar_ciudadanos.php");
         }
         if ($row["rol"] == 0) { //Administrador
-            header("Location:".VIEWS_PATH."admin/admin.php");
+            header("Location:".VIEWS_PATH."admin/registrar_ciudadano.php");
         }
     }
     //header("Location:".VIEWS_PATH."home_user.php");
