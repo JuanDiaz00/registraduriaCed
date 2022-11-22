@@ -33,7 +33,12 @@ $pdf->Cell(0, 10, 'Reporte de Usuarios', 0, 1);
 $result = getAllCiudadanos();
 
 while ($row = mysqli_fetch_assoc($result)) {
-
+$pdf->Cell(0, 10, $row['identificacion'], 0, 1);
+$pdf->Cell(0, 10, $row['nombres'], 0, 1);
+$pdf->Cell(0, 10, $row['apellidos'], 0, 1);
+$pdf->Cell(0, 10, $row['fx_nacimiento'], 0, 1);
+$pdf->Cell(0, 10, $row['lugar_nacimiento'], 0, 1);
+$pdf->AddPage();
 } #Acá se hace el for para ingresar todos los usuarios
 
 // output file
