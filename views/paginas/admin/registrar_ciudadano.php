@@ -97,7 +97,7 @@ require_once(CONTROLLER_PATH . "ciudadanos.php");
             </div>
         </div>
         <br>
-        <table class="table table-stripped">
+        <!-- <table class="table table-stripped">
             <thead>
                 <tr>
                     <th scope="col">Nombres</th>
@@ -111,28 +111,28 @@ require_once(CONTROLLER_PATH . "ciudadanos.php");
                     <th scope="col">RH</th>
                 </tr>
             </thead>
-            <tbody>
-                <?php
-                $result = getAllCiudadanos();
-                if ($result != null) {
-                    while ($ciudadano = mysqli_fetch_assoc($result)) {
-                ?>
+            <tbody> -->
+                <!-- php 
+                // $result = getAllCiudadanos();
+                // if ($result != null) {
+                //     while ($ciudadano = mysqli_fetch_assoc($result)) {
+                 
                         <tr>
-                            <td><?php echo $ciudadano["nombres"]; ?></td>
-                            <td><?php echo $ciudadano["apellidos"]; ?></td>
-                            <td><?php echo $ciudadano["identificacion"]; ?></td>
-                            <td><?php echo $ciudadano["fx_nacimiento"]; ?></td>
-                            <td><?php echo $ciudadano["lugar_nacimiento"]; ?></td>
-                            <td><?php echo $ciudadano["lugar_exp"]; ?></td>
-                            <td><?php echo $ciudadano["estatura"]; ?></td>
-                            <td><?php echo $ciudadano["gs"]; ?></td>
-                            <td><?php echo $ciudadano["rh"]; ?></td>
+                            <td><php echo $ciudadano["nombres"]; ?></td>
+                            <td><php echo $ciudadano["apellidos"]; ?></td>
+                            <td><php echo $ciudadano["identificacion"]; ?></td>
+                            <td><php echo $ciudadano["fx_nacimiento"]; ?></td>
+                            <td><php echo $ciudadano["lugar_nacimiento"]; ?></td>
+                            <td><php echo $ciudadano["lugar_exp"]; ?></td>
+                            <td><php echo $ciudadano["estatura"]; ?></td>
+                            <td><php echo $ciudadano["gs"]; ?></td>
+                            <td><php echo $ciudadano["rh"]; ?></td>
                         </tr>
-                <?php
+                <php
                     }
                 }
                 ?>
             </tbody>
-        </table>
+        </table> -->
 
     </div>
