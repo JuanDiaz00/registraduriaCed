@@ -19,7 +19,7 @@ body {
 .box {
     position: relative;
     width: 700px;
-    height: 800px;
+    height: 900px;
     left: 1%;
     top: 1%;
     background: #1c1c1c;
@@ -30,7 +30,7 @@ body {
 .box2 {
     position: relative;
     width: 715px;
-    height: 815px;
+    height: 915px;
     left: 10%;
     background: #1c1c1c;
     border-radius: 8px;

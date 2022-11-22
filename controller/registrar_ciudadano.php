@@ -10,6 +10,6 @@ VALUES
 $db -> query($query);
 } if (isset($_POST['New_citizen'])) {
     addCitizen($_POST["nombres"], $_POST["apellidos"], $_POST["identificacion"], $_POST["fx_nacimiento"], $_POST["lugar_nacimiento"], $_POST["lugar_exp"], $_POST["estatura"], $_POST["rh"], $_POST["gs"]);
-    header("Location: ../views/paginas/admin/registrar_ciudadano.php?=sucess");
+    header("Location: ../views/paginas/admin/registrar_ciudadano.php?status=success");
 }
 ?>

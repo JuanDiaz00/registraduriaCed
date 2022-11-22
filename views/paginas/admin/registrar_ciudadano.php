@@ -19,7 +19,7 @@ require_once(CONTROLLER_PATH . "ciudadanos.php");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="../../estilos/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="../../estilos/bootstrap.min.css">
     <link rel="stylesheet" href="../../estilos/registrar_ciudadano.css">
     <link rel="stylesheet" href="../../estilos/menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -40,9 +40,9 @@ require_once(CONTROLLER_PATH . "ciudadanos.php");
         <a class="btn" href="../index.php?info=2"><button>Cerrar sesión</button></a>
     </header>
     <br>
-    <div class="container-fluid">
-        <div class="col-md-9">
-            <div class="jumbotron">
+    <div>
+        <div>
+            <div>
                 <h2 style="color: black;">
                     Administración de ciudadanos
                 </h2>
@@ -52,6 +52,22 @@ require_once(CONTROLLER_PATH . "ciudadanos.php");
             </div>
         </div>
         <br>
+        <?php
+        if (isset($_GET["status"])) {
+            if ($_GET["status"] == 'success') {
+        ?>
+                <div class="alert alert-success d-flex alert-dismissible fade show" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+                        <use xlink:href="#exclamation-triangle-fill" />
+                    </svg>
+                    <strong>¡Ciudadano Registrado Correctamente!</strong>
+                    <!-- <button type="close" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> -->
+                    <a href="./registrar_ciudadano.php" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></a>
+                </div>
+        <?php
+            }
+        }
+        ?>
         <div class="box2">
             <div class="box">
 
