@@ -26,6 +26,7 @@ $pdf->Cell(0, 10, 'Reporte de Usuarios', 0, 1);
 
 $result = getAllCiudadanos();
 
+$pdf->SetFont('Arial', '', 12);
 while ($row = mysqli_fetch_assoc($result)) {
 $pdf->Cell(0, 10, $row['identificacion'], 0, 1);
 $pdf->Cell(0, 10, $row['nombres'], 0, 1);
