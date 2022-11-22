@@ -12,6 +12,7 @@ if (!defined('CONFIG_PATH')) {
 require_once(CONTROLLER_PATH . "ciudadanos.php");
 ?>
 <html>
+
 <head>
     <title>Ingreso</title>
     <meta charset="utf-8">
@@ -23,7 +24,7 @@ require_once(CONTROLLER_PATH . "ciudadanos.php");
 
     <link rel="stylesheet" href="../estilos/styles.css">
 
-    </head>
+</head>
 
-    
+
 </html>
