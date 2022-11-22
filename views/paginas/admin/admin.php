@@ -11,17 +11,19 @@ if (!defined('CONFIG_PATH')) {
 
 require_once(CONTROLLER_PATH . "ciudadanos.php");
 ?>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../estilos/bootstrap.min.css">
-    <link rel="stylesheet" href="../../estilos/registrar_ciudadano.css">
+    <link rel="stylesheet" href="../../estilos/admin.css">
     <link rel="stylesheet" href="../../estilos/menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>Generar Reporte</title>
+    <title>Consulta de reportes</title>
 </head>
 
 <body>
@@ -42,11 +44,10 @@ require_once(CONTROLLER_PATH . "ciudadanos.php");
         <div>
             <div>
                 <h2 style="color: black;">
-                    Generar Reporte
+                    Generación de reporte
                 </h2>
                 <p>
-                    En esta sección se le permitira generar un reporte como administrador, de todos los ciudadanos que 
-                    se encuentran en la base de datos.
+                    Oprima el siguiente botón si quiere generar un reporte de ciudadanos.
                 </p>
             </div>
         </div>
@@ -56,15 +57,18 @@ require_once(CONTROLLER_PATH . "ciudadanos.php");
 
                 <form action="../../../controller/registrar_ciudadano.php" method="POST">
                     <h2>Generar reporte</h2>
-                    <p style="color: #fff; text-align: left; font-size: 15px;">Oprima el siguiente botón si quiere generar un reporte de ciudadanos.</p>
                     <br>
                     <div>
-                        <a href='./reporte.php' type="submit" value="Generar" required>Generar</a>
+                        <a class="intento" href="./reporte.php">Generar</a>
                     </div>
+                    
                 </form>
             </div>
         </div>
         <br>
+
     </div>
+
 </body>
+
 </html>
