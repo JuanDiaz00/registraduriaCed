@@ -1,4 +1,21 @@
+<?php
+#Paths
+define('LIBRARIES_PATH', '../../../modelo/');
+define('CONTROLLER_PATH', '../../../controller/');
+define('VIEWS_PATH', '../../../views/');
+define('CSS_PATH', '../../estilos/');
+define('JS_PATH', '../../scripts/');
 
+if (!defined('CONFIG_PATH')) {
+    define('CONFIG_PATH', '../../../config/');
+}
+
+require_once(CONTROLLER_PATH . "ciudadanos.php");
+?>
+
+<html>
+
+</html>
 
 <?php
 #Acá voy a hacer lo de generar reporte, no tocar.
