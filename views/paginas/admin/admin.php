@@ -28,7 +28,11 @@ $pdf->AddPage();
 
 // add text
 $pdf->SetFont('Arial', '', 12);
-$pdf->Cell(0, 10, 'Generar archivos PDF con PHP', 0, 1);
+$pdf->Cell(0, 10, 'Reporte de Usuarios', 0, 1);
+
+for($i = 1; $i < 10; $i++){
+
+} #Acá se hace el for para ingresar todos los usuarios
 
 // output file
 $pdf->Output('', 'reporte.pdf');
