@@ -34,7 +34,7 @@ $pdf->SetFont('Arial', '', 12);
 $pdf->SetFillColor(232,232,232);
 
 $pdf->SetFont('Arial','B',10);
-$pdf->Cell(36,6,'Identificación',1,0,'C',1);
+$pdf->Cell(36,6, utf8_decode('Identificación'),1,0,'C',1);
 $pdf->Cell(36,6,'Nombres',1,0,'C',1);
 $pdf->Cell(36,6,'Apellidos',1,0,'C',1);
 $pdf->Cell(36,6,'Fecha Nacimiento',1,0,'C',1);
@@ -42,7 +42,7 @@ $pdf->Cell(36,6,'Lugar Nacimiento',1,0,'C',1);
 $pdf->Ln(10);
 
 while ($row = mysqli_fetch_assoc($result)) {
-$id = utf8_decode($row['identificacion']);
+$id = $row['identificacion'];
 $nombres = $row['nombres'];
 $apellidos = $row['apellidos'];
 $fx_nacimiento = $row['fx_nacimiento'];
