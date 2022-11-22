@@ -9,7 +9,7 @@ if (!defined('CONFIG_PATH')) {
     define('CONFIG_PATH', '../../../config/');
 }
 
-require_once(CONTROLLER_PATH ."ciudadanos.php");
+require_once(CONTROLLER_PATH . "ciudadanos.php");
 ?>
 
 <!DOCTYPE html>
@@ -21,11 +21,25 @@ require_once(CONTROLLER_PATH ."ciudadanos.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="../../estilos/bootstrap.min.css"> -->
     <link rel="stylesheet" href="../../estilos/registrar_ciudadano.css">
+    <link rel="stylesheet" href="../../estilos/menu.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Administración ciudadano</title>
 </head>
 
 <body>
+    <header class="header">
+        <div class="logo">
+            <img src="../asset/logo.png" alt="Logo de la marca">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Registrar ciudadano</a></li>
+                <li><a href="./admin.php">Generar reporte</a></li>
+            </ul>
+        </nav>
+        <a class="btn" href="../index.php?info=2"><button>Cerrar sesión</button></a>
+    </header>
+    <br>
     <div class="container-fluid">
         <div class="col-md-9">
             <div class="jumbotron">
@@ -43,6 +57,7 @@ require_once(CONTROLLER_PATH ."ciudadanos.php");
 
                 <form action="../../../controller/registrar_ciudadano.php" method="POST">
                     <h2>Registrar ciudadano</h2>
+                    <p style="color: #fff; text-align: left; font-size: 15px;">Por favor ingrese cada uno de los datos del ciudadano a registrar.</p>
                     <div class="inputBox col-sm-6">
                         <input type="text" name="nombres" required>
                         <span>Nombres</span>
@@ -90,7 +105,7 @@ require_once(CONTROLLER_PATH ."ciudadanos.php");
                     </div>
                     <br>
                     <div>
-                        <input type="submit" value="Registrar ciudadano" required>
+                        <input type="submit" value="Registrar" required>
                     </div>
                     <input type="hidden" name="New_citizen">
                 </form>
@@ -112,7 +127,7 @@ require_once(CONTROLLER_PATH ."ciudadanos.php");
                 </tr>
             </thead>
             <tbody> -->
-                <!-- php 
+        <!-- php 
                 // $result = getAllCiudadanos();
                 // if ($result != null) {
                 //     while ($ciudadano = mysqli_fetch_assoc($result)) {

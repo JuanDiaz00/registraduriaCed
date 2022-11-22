@@ -13,10 +13,25 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<link rel="stylesheet" href="../estilos/styles.css">
+	<link rel="stylesheet" href="../estilos/menu.css">
 
 </head>
 
 <body>
+
+<header class="header">
+        <div class="logo">
+            <img src="./asset/logo.png" alt="Logo de la marca">
+        </div>
+        <nav>
+            <!-- <ul class="nav-links">
+                <li><a href="#">Registrar ciudadano</a></li>
+                <li><a href="./admin.php">Generar reporte</a></li>
+            </ul> -->
+        </nav>
+        <a class="btn" href="./index.php"><button>Iniciar Sesión</button></a>
+    </header>
+
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">

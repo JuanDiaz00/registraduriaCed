@@ -19,7 +19,7 @@ body {
 .box {
     position: relative;
     width: 700px;
-    height: 700px;
+    height: 800px;
     left: 1%;
     top: 1%;
     background: #1c1c1c;
@@ -30,7 +30,7 @@ body {
 .box2 {
     position: relative;
     width: 715px;
-    height: 715px;
+    height: 815px;
     left: 10%;
     background: #1c1c1c;
     border-radius: 8px;
@@ -88,6 +88,7 @@ h2 {
 	color: #45f3ff;
 	font-weight: 500;
 	text-align: center;
+	font-size: 50px;
 	letter-spacing: 0.1em;
 }
 
@@ -99,7 +100,7 @@ p {
 
 .inputBox {
 	position: relative;
-	width: 700px;
+	width: 500px;
 	margin-top: 25px;
 }
 
@@ -153,7 +154,7 @@ p {
 .inputBox input:valid ~ i,
 .inputBox input:focus ~ i {
     background: #45f3ff;
-	height: 30px;
+	height: 35px;
 }
 
 input[type="submit"]
@@ -165,7 +166,8 @@ input[type="submit"]
 	cursor: pointer;
 	border-radius: 4px;
 	font-weight: 600;
-	width: 200px;
+	width: 220px;
+	margin-left: 200px;
 	margin-top: 10px;
 }
 
