@@ -55,18 +55,20 @@ require_once(CONTROLLER_PATH . "ciudadanos.php");
         <div class="box2">
             <div class="box">
 
-                <form action="../../../controller/registrar_ciudadano.php" method="POST">
+                <form action="./reporte.php" method="POST">
                     <h2>Generar reporte</h2>
                     <br>
+                    <!-- HTML !-->
+
+
                     <div>
-                        <a class="intento" href="./reporte.php">Generar</a>
+                    <button class="button-10" role="button" href="./reporte.php">Generar Reporte</button>
                     </div>
                     
                 </form>
             </div>
         </div>
         <br>
-
     </div>
 
 </body>
