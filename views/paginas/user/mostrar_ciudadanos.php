@@ -26,78 +26,83 @@ require_once(CONTROLLER_PATH . "ciudadanos.php");
 </head>
 
 <body>
-    <header class="header">
-        <div class="logo">
-            <img src="../asset/logo.png" alt="Logo de la marca">
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#">Registrar ciudadano</a></li>
-                <li><a href="./admin.php">Generar reporte</a></li>
-            </ul>
-        </nav>
-        <a class="btn" href="../index.php?info=2"><button>Cerrar sesión</button></a>
-    </header>
-    <div class="container-fluid">
-        <div class="row">
 
-            <div class="col-md-9">
-                <div class="jumbotron">
-                    <h2 style="color: black;">
-                        Ciudadanos Registrados
-                    </h2>
-                    <table class="table col-sm-6" class="table table-dark table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">identificacion</th>
-                                <th scope="col">nombres</th>
-                                <th scope="col">apellidos</th>
-                                <th scope="col">fecha nacimiento</th>
-                                <th scope="col">Nacionalidad</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <img src="../asset/logo.png" alt="Logo de la marca">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/views/paginas/admin/registrar_ciudadano.php">Ver ciudadanos</a></li>
 
+                    <li><a href="./admin.php">Generar reporte</a></li>
+                </ul>
+            </nav>
+            <a class="btn" href="../index.php?info=2"><button>Cerrar sesión</button></a>
+        </header>
+        <h2 style="color: black;">
+            Ciudadanos Registrados
+        </h2>
+        <div class="container-fluid">
+            <div class="row">
+                <center>
+                    <div class="col-md-9">
+                        <div class="jumbotron">
 
-                            <?php
+                            <table class="table col-sm-6" class="table table-dark table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">identificacion</th>
+                                        <th scope="col">nombres</th>
+                                        <th scope="col">apellidos</th>
+                                        <th scope="col">fecha nacimiento</th>
+                                        <th scope="col">Nacionalidad</th>
+                                        <th scope="col">editar</th>
+                                        <th scope="col">informe</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
                             $result = getAllCiudadanos();
                             while ($row = mysqli_fetch_assoc($result)) {
-
                             ?>
-                                <tr>
-                                    <td>
-                                        <?php echo $row["identificacion"]; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $row["nombres"]; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $row["apellidos"]; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $row["fx_nacimiento"]; ?>
-                                    </td>
-                                    <td>
-                                        <?php echo $row["lugar_nacimiento"]; ?>
-                                    </td>
-                                </tr>
-                            <?php
+                                    <tr>
+                                        <td>
+                                            <?php echo $row["identificacion"]; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row["nombres"]; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row["apellidos"]; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row["fx_nacimiento"]; ?>
+                                        </td>
+                                        <td>
+                                            <?php echo $row["lugar_nacimiento"]; ?>
+                                        </td>
+                                        <td>
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                        </td>
+                                        <td>
+                                        <i class="fa-regular fa-folder-open"></i>
+                                        </td>
+                                        
+                                    </tr>
+                                    <?php
                             }
                             ?>
-
-                        </tbody>
-                    </table>
-                </div>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </center>
             </div>
         </div>
-    </div>
 
 
-    <script src="../scripts/jquery.min.js"></script>
-    <script src="../scripts/popper.js"></script>
-    <script src="../scripts/bootstrap.min.js"></script>
-    <script src="../scripts/main.js"></script>
-
-</body>
+    </body>
 
 </html>

@@ -33,7 +33,8 @@ require_once(CONTROLLER_PATH . "ciudadanos.php");
         </div>
         <nav>
             <ul class="nav-links">
-                <li><a href="#">Registrar ciudadano</a></li>
+                <li><a href="/views/paginas/admin/registrar_ciudadano.php">Ver ciudadanos</a></li>
+                
                 <li><a href="./admin.php">Generar reporte</a></li>
             </ul>
         </nav>

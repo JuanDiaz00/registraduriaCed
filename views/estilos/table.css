@@ -1,0 +1,76 @@
+.buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .buttons a {
+    height: 70px;
+    width: 70px;
+    display: inline-block;
+    color: white;
+    background: #E91E63;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    font-size: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+    box-shadow: 2px 2px 10px black;
+  }
+  
+  .buttons a::before {
+    content: '\f141';
+    display: block;
+    margin: 13px 0;
+    transition: all ease-in-out .3s;
+  }
+  
+  .buttons a:hover::before {
+    margin-top: -44px;
+  }
+  
+  
+  .buttons a::after {
+    content: '\f141';
+    display: block;
+    /* margin: 13px 0; */
+    transition: all ease-in-out .3s;
+  }
+  
+  .buttons a.dos {
+    background: #E64A19;
+  }
+  
+  a.dos::before {
+    content: '\f144';
+  }
+  
+  a.dos::after {
+    content: '\f144';
+  }
+  
+  .buttons a.tres {
+    background: #FBC02D;
+  }
+  
+  a.tres::before {
+    content: '\f3e2';
+  }
+  
+  a.tres::after {
+    content: '\f3e2';
+  }
+  
+  .buttons a.cuatro {
+    background: #7B1FA2;
+  }
+  
+  a.cuatro::before {
+    content: '\f3e5';
+  }
+  
+  a.cuatro::after {
+    content: '\f3e5';
+  }
