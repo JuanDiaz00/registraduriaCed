@@ -34,6 +34,7 @@ function updateOneCiudadano($id, $nombres, $apellidos, $identificacion, $fx_naci
     $db -> query($queryCiudadano);
 }
 
+
 function newCiudadano($nombres, $apellidos, $identificacion, $fx_nacimiento, $lugar_nacimiento, $lugar_exp, $estatura, $gs, $rh) {
     $db = Conexion::getConnection();
     $queryCiudadano = "INSERT INTO ciudadano (nombres, apellidos, identificacion, fx_nacimiento, lugar_nacimiento, lugar_exp, estatura, gs, rh) VALUES ('$nombres', '$apellidos', '$identificacion', '$fx_nacimiento', '$lugar_nacimiento', '$lugar_exp', '$estatura', '$gs', '$rh')";
