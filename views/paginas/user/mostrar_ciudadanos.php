@@ -117,7 +117,11 @@ require_once(CONTROLLER_PATH . "ciudadanos.php");
                     <div class="box">
 
                         <form action="../../../controller/actualizar.php" method="POST">
+<<<<<<< HEAD
                             <h2>Actualizar datos</h2>
+=======
+                            <h2>Registrar ciudadano</h2>
+>>>>>>> main
                             <p style="color: #fff; text-align: left; font-size: 15px;">Por favor ingrese
                                 cada uno de los datos del ciudadano a registrar.</p>
                             <div class="inputBox col-sm-6">
